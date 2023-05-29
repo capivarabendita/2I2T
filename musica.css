@@ -8,7 +8,7 @@ body{
 }
 .menu{
     width: 100%;
-    height: 60px;
+    height: 150px;
     background-color: aqua;
 }
 .conteudo-musica{
@@ -41,9 +41,4 @@ body{
 }
 .img-ini{
     width: 100%;
-}
-@media screen and (min-width: 768px) {
-    .menu{
-        background-color: black;
-    }
 }
