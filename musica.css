@@ -3,68 +3,198 @@
     margin: 0;
 }
 
+:root{
+    --fundo:rgb(161, 22, 241);
+    --fonte:rgb(234, 0, 255);
+    --rover:rgb(255, 0, 170);
+}
+
 body{
     background-color: crimson;
 }
+
+
+a{
+    text-decoration: solid;
+}
+
+
+ul{
+    list-style: georgian;
+}
+
+
+.header{
+    background-color: var(--fundo);
+    width: 100%;
+    position: sticky;
+    top: 0%;
+}
+
+
+.logo{
+    display: inline-block;
+    color: var(--fonte);
+}
+
+
+.nav{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+}
+
+
+.nav a{
+    display: block;
+    padding: 30px;
+    color: var(--fonte);
+}
+
+
+.nav a:hover{
+    background-color: var(--rover);
+
+}
+
+
+.nav{
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+
+.hamburger{
+     cursor: pointer;
+     float: right;
+     padding: 15px 20px;
+}
+
+
+.hamb-line{
+background: var(--fonte);
+display: block;
+height: 2px;
+position: relative;
+width: 24px;
+
+}
+
+.hamb-line::before,
+.hamb-line::after{
+    background-color: var(--fonte);
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+
+.hamb-line::before{
+    top: 5px;
+}
+
+
+.hamb-line::after{
+    top: -5px;
+}
+
+
+.side-menu{
+    display: none;
+}
+
+
+.side-menu:checked{
+    max-width: 100%;
+}
+
+
+.side-menu:checked ~ .hamburger .hamb-line{
+    background: transparent;
+}
+
+
 .menu{
     width: 100%;
     height: 60px;
     background-color: aqua;
 }
+
+
 .conteudo-musica{
     width: 100%;
 }
+
+
 .rodape{
     width: 100%;
     background-color:goldenrod;
     text-align: center;
 }
+
+
 .desc-estilo{
     width: 100%;
     background-color: aliceblue;
 }
+
+
 .desc-solo{
     width: 100%;
     background-color: azure;
 }
+
+
 .desc-grupo{
     width: 100%;
     background-color: beige;
 }
+
+
 .desc-banda{
     width: 100%;
     background-color: blanchedalmond;
 }
+
+
 .desc-app{
     width: 100%;
     background-color: bisque;
 }
+
+
 .img-ini{
     width: 100%;
 }
+
+
 @media screen and (min-width: 768px) {
-    .menu{
+    .menu {
         height: 120px;
         background-color: black;
         color: crimson;
         font-size: 32px;
     }
-    .desc-solo{
-        display: flex;
+    .desc-solo {
+        display: flex;       
     }
 }
 
 
 @media screen and (min-width: 1280px) {
-    .menu{
+    .menu {
         height: 200px;
         font-size: 64px;
         background-color: blueviolet;
     }
-    .img-ini{
+    .img-ini {
         width: 50%;
     }
-    .desc-solo{
+    .desc-solo {
         display: grid;
     }
 }
