@@ -15,33 +15,25 @@ body{
 
 
 a{
-    text-decoration: solid;
+    text-decoration: none;
 }
 
 
 ul{
-    list-style: georgian;
-}
-
-
-.header{
-    background-color: var(--fundo);
-    width: 100%;
-
-    top: 0%;
+    list-style: none;
 }
 
 
 .logo{
     display: inline-block;
     color: var(--fonte);
-    font-size: 60px;
+    font-size: 32px;
+
 }
 
-
 #logo{
-     width: 10vh;
-     height: 10vh;
+     
+     height: 15vh;
     
 
 }
@@ -235,4 +227,22 @@ width: 24px;
     .desc-solo {
         display: grid;
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.oq{
+    background-color: rgba(150, 255, 255, 0.582);
+    height: 35px;
+    width: 100%;
+    font-size: 35px;
 }
