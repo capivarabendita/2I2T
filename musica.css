@@ -10,7 +10,7 @@
 }
 
 body{
-    background-color: crimson;
+    background-color: salmon;
 }
 
 
@@ -136,13 +136,17 @@ width: 24px;
 .menu{
     width: 100%;
     position: sticky;
-    background-color: aqua;
+    background-color: var(--fundo);
     top: 0;
+    font-size: 54px;
 }
 
 
 .conteudo-musica{
-    width: 100%;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 100%;
+
 }
 
 
@@ -152,43 +156,23 @@ width: 24px;
     text-align: center;
 }
 
+.definicao{
+    width: 100vw;
+    padding: 0;
+    background-color: whitesmoke;
+    grid-area: def;
+}
 
-.desc-estilo{
-    width: 100%;
-    background-color: rgb(225, 107, 255);
+.img-definicao{
+    display: none;
+}
+
+.descricao{
+    width: 100vw;
 }
 
 
-.desc-solo{
-    width: 100%;
-    background-color: rgb(193, 101, 255);
-}
-
-
-.desc-grupo{
-    width: 100%;
-    background-color: #ba44ff;
-}
-
-
-.desc-banda{
-    width: 100%;
-    background-color: rgb(184, 30, 255);
-}
-
-
-.desc-app{
-    width: 100%;
-    background-color: rgb(195, 0, 255);
-}
-
-
-.img-ini{
-    width: 100%;
-}
-
-
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
       .nav{
         max-height: none;
         top: 0;
@@ -204,30 +188,29 @@ width: 24px;
         background-color:transparent;
         color: var(--rover);
       } 
-      .hamburger {
+      .hamb {
         display: none;
       }
       #logo {
-        width: 15vh;
-        height: 15vh;
+        width: 16vh;
+        height: 16vh;
+      }
+      .conteudo-musica{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+      }
+      .descricao{
+        display: block;
+        width: 80vw;
+      }
+      .img-definicao{
+        display: block;
+        width: 10vw;
       }
 
 }
 
-
-@media screen and (min-width: 1280px) {
-    .menu {
-        height: 200px;
-        font-size: 64px;
-        background-color: blueviolet;
-    }
-    .img-ini {
-        width: 50%;
-    }
-    .desc-solo {
-        display: grid;
-    }
-}
 
 
 
