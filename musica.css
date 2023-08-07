@@ -5,13 +5,13 @@
 }
 
 :root{
-    --fundo:rgb(161, 22, 241);
-    --fonte:rgb(234, 0, 255);
-    --rover:rgb(255, 0, 170);
+    --fundo:#807070;
+    --fonte:#9a8fc8;
+    --rover:#8dbdeb;
 }
 
 body{
-    background-color: salmon;
+    background-color: #a5e6c8;
 }
 
 
@@ -150,16 +150,11 @@ width: 24px;
 }
 
 
-.conteudo-musica{
-    display: grid;
-    grid-template-columns: 50%  50%;
-    grid-template-areas: def;
-}
 
 
 .rodape{
     width: 100vw;
-    background-color:rgb(219, 156, 255);
+    background-color: #d9f5b5;
     text-align: center;
 }
 
@@ -197,6 +192,8 @@ width: 24px;
 
 .conteudo-musica{
     width: 100vw;
+    display: flex;
+    flex-direction: column;
 }
 
 .definicao{
@@ -211,6 +208,23 @@ width: 24px;
 
 .descricao{
     width: 100vw;
+}
+
+
+.info{
+    display: grid;
+    width: 100%;
+}
+
+
+div[class^="item-"]{
+    background-color:#ffa1a1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    margin: 2px;
+    grid-area: "item";
 }
 
 @media screen and (min-width: 820px) {
@@ -236,11 +250,7 @@ width: 24px;
         width: 16vw;
         height: 16vh;
       }
-      .conteudo-musica{
-        display: grid;
-        justify-content: center;
-        align-items: center;
-      }
+      
       .descricao{
         display: block;
         width: 80vw;
@@ -249,71 +259,19 @@ width: 24px;
         display: block;
         width: 10vw;
       }
-      .conteudo{
-        display: grid;
+      .info{
         grid-template-columns: 50% 50%;
-        grid-template-columns: 
-        "estilo estilo"
-        "solo grupo"
-        "banda app";
+        grid-template-areas: "item" "item"; 
       }
+    
 }
 
-
-
-@media screen and (min-width: 820px) {
-    .nav{
-      max-height: none;
-      top: 0;
-      position: relative;
-      float: right;
-      width: fit-content;
-      background-color: transparent;
-    }
-    .menu li{
-      float: left;
-    }
-    .menu a:hover{
-      background-color:transparent;
-      color: var(--rover);
-    } 
-    .hamb {
-      display: none;
-    }
-    #logo {
-      width: 20vw;
-      height: 20vh;
-    }
-    .conteudo-musica{
-      display: grid;
+@media screen and (min-width: 1024px) {
+   
+    .info{
       grid-template-columns: 33% 34% 33%;
-      grid-template-areas: "def def def";
+      grid-template-areas: "item" "item" "item"; 
     }
-    .definicao{
-        display: flex;
-        width: 100vw;
-        
-    }
-    .descricao{
-      display: block;
-      height: 100%;
-      padding: 50px;
-      width: 80vw;
-    }
-    .img-definicao{
-      display: block;
-      width: 10vw;
-    }
-    .conteudo{
-      display: grid;
-      grid-template-columns: 50% 50%;
-      grid-template-columns: 
-      "estilo estilo"
-      "solo grupo"
-      "banda app";
-    }
+  
 }
-
-
-
 
